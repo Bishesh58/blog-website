@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    min-height: 350px;
+    background: #1111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./assets/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+header > * {
+    z-index: 12;
+}
+
+header::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+.profile__image{
+   height: 100px; 
+   width: 100px;
+   background: purple;
+   border-radius: 50%;
+   background-image: url(./assets/p.jpg);
+   background-size: cover;
+}
+
+.profile__name{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.main{
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.main__container{
+    max-width: 750px;
+    min-width: 600px;
+    width: 100%;
+    padding: 0 16px;
+
+   
+}
+
+.post{
+    display: flex;
+    margin-top: 24px;
+    border: 1px solid #eaecee;
+    border-radius: 8px;
+    min-height: 200px;
+    overflow: hidden;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.post:hover{
+    transform: translate3d(0, -5px, 0);
+    box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.3); 
+}
+.post__image{
+    flex-basis: 40%;
+    background-image: url(https://images.unsplash.com/photo-1588883472323-094134a89bff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+    background-size: cover;
+    background-position: center;
+}
+
+.post__content{
+    flex-basis: 60%;
+    padding: 24px;
+}
+
+.post__date{
+    font-size: 12px;
+    color: #adb5bd;
+    font-weight: 600;
+}
+
+.post__title{
+    margin-top: 16px;
+    font-size: 1.5em;
+    color: #333;
+    font-weight: 600;
+}
+
+.post__text{
+   line-height: 1.4;
+   max-height: 65px;
+   overflow: hidden;
+}
+
+
+.nav__button.newPost__button{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    background-color: #004186;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.25s ease;
+}
+
+.nav__button.newPost__button:hover{
+    transform: scale(1.1);
+}
+
+
+footer{
+    margin-top: 40px;
+    font-size: 14px;
+    min-height: 100px;
+    background-color: #1111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
