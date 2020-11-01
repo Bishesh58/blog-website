@@ -15,7 +15,7 @@ header{
 }
 
 
-.home__page header{
+.home__page header, .new-post-page header{
     background-image: url(../assets/bg.jpg);
 }
 
@@ -43,7 +43,7 @@ header::after{
    background-size: cover;
 }
 
-.profile__name{
+.profile__name, .title {
     font-size: 2em;
     font-weight: bold;
 }
