@@ -22,10 +22,13 @@ const getPosts =()=>{
 const showPosts =(posts)=>{
     let blogPostContent = "";
    
+   
     for(post of posts){
-        const postDate = new Date(parseInt(post.added_date)).toString();
+        const postDate = new Date(parseInt(post.added_date)).toDateString();
+        const postImage = `${BASE_URL}${post.post_image}`;
+
        blogPostContent+= `<div class="post">
-                            <div class="post__image"></div>
+                            <div class="post__image" style="background-image: url(${postImage})"></div>
                             <div class="post__content">
                                 <div class="post__date">${postDate}</div>
                                 <div class="post__title">${post.title}</div>
