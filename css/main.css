@@ -5,16 +5,20 @@
 
 header{
     min-height: 250px;
-    background: #1111;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(../assets/bg.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
 }
+
+
+.home__page header{
+    background-image: url(../assets/bg.jpg);
+}
+
 header > * {
     z-index: 12;
 }
@@ -167,4 +171,8 @@ footer{
     padding: 24px 16px 0 16px;
     line-height: 1.4;
     color: #495057;
+}
+
+a.post__link{
+    text-decoration: none;
 }
